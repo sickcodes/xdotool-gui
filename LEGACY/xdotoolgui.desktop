@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Xdotoolgui
+Name[zh_CN]=按键精灵
+Icon=/usr/share/games/xdotoolgui/data/xdotoolgui.gif
+Comment= A little game to play Rock, Paper,Scissors against the computer.
+Exec=python /usr/games/xdotoolgui.py
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Game;
+StartupNotify=false

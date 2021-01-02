@@ -1,0 +1,13 @@
+Source: xdotoolgui
+Section: games
+Priority: optional
+Maintainer: esbat <esbatmop@gmail.com>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.0
+Homepage: http://hi.baidu.com/esbat/blog/item/fba4a5cc98df491b01e928e8.html
+
+Package: xdotoolgui
+Architecture: any
+Depends: python(>=2.6),xdotool,python-gtk2
+Description: A gui for xdotool. Make it esay to used in gnome. 
+ <insert long description, indented with spaces>
