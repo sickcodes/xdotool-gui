@@ -31,9 +31,12 @@ import time
 # import thread
 import subprocess
 import string
+import tempfile
 
 import gi
-gi.require_version("Gtk", "3.0")
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk
+
 from gi.repository import Gtk
 from gi.repository import Gdk
 from gi.repository import Gio
@@ -51,7 +54,7 @@ except:
 # except:
 #     sys.exit(1)
 
-filename = '.xdotool-script'
+filename = tempfile.NamedTemporaryFile(delete=True).name #'./.xdotool-script'
 MouseLocation = False
 
 class xdotoolgui:
@@ -60,11 +63,12 @@ class xdotoolgui:
     def __init__(self):
         #Set the Glade file
         self.builder = Gtk.Builder()
-        try:
-            self.builder.add_from_file("xdotoolgui.glade")
-        except:
-            print("file not found")
-            sys.exit()
+        # try:
+        # self.builder.add_from_file("test.ui")
+        self.builder.add_from_file("xdotoolgui.glade")
+        # except:
+        #     print("Error file not found")
+        #     sys.exit()
 
         self.builder.get_object('window1').set_title('xdotool-gui')
         self.window = self.builder.get_object("window1")
@@ -113,7 +117,7 @@ class xdotoolgui:
         buffer=self.builder.get_object('textview1').get_buffer()
         buffer.set_text('')
         global filename
-        filename = 'new file'
+        filename = tempfile.NamedTemporaryFile(delete=True).name
         self.builder.get_object('statusbar1').push(self.builder.get_object('statusbar1').get_context_id("file name"),filename)
         
     def open_activate(self, widget):
@@ -226,9 +230,11 @@ class xdotoolgui:
         own = self.builder.get_object('textview1').get_buffer()
         start, end = own.get_bounds()
         chars = own.get_slice(start, end, False)
-        x=self.builder.get_object('entry_sum4').get_text()
-        y=self.builder.get_object('entry_time4').get_text()
-        key=self.builder.get_object('entry1').get_text()
+        x = self.builder.get_object('entry_sum4').get_text()
+        y = self.builder.get_object('entry_time4').get_text()
+        key = self.builder.get_object('entry1').get_active_text()
+        if self.builder.get_object('entry1_text').get_text() != '':
+            key = self.builder.get_object('entry1_text').get_text()
         chars = chars +"type keybord as "+key+" for "+x+" times then delay "+y+" seconds\n"
         own.set_text(chars)
         self.dialog4.hide()
@@ -310,3 +316,6 @@ if __name__ == "__main__":
     editor =xdotoolgui()
     #editor.window.show()
     Gtk.main()
+    
+
+
