@@ -4,11 +4,11 @@ pkgver=1.3
 pkgrel=1
 pkgdesc="GUI for command-line X11 automation tool"
 arch=('any')
-url="https://github.com/sickcodes/xdotool-gui"
+url="https://github.com/aleritty/xdotool-gui"
 license=('GPL')
 makedepends=('git')
 depends=('xdotool' 'python3' 'gobject-introspection-runtime' 'python-gobject') #'PyGObject for python
-source=("git+https://github.com/sickcodes/xdotool-gui")
+source=("git+https://github.com/aleritty/xdotool-gui")
 
 package() {
   cd "xdotool-gui"
