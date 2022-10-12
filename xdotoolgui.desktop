@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=XDoTool-Gui
+Icon=/usr/share/xdotool-gui/xdotoolgui.png
+Comment= GUI for command-line X11 automation tool
+Exec=python /usr/share/xdotool-gui/xdotoolgui.py
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;Game;
+StartupNotify=false
