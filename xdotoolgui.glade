@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.39.0 -->
+<!-- Generated with glade 3.40.0 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
   <object class="GtkComboBoxText">
@@ -346,10 +346,10 @@
             <property name="can-focus">False</property>
             <property name="orientation">vertical</property>
             <child>
-              <object class="GtkLabel" id="label9">
+              <object class="GtkLabel" id="label6">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
-                <property name="label" translatable="yes">seconds</property>
+                <property name="label" translatable="yes">click mouse</property>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -358,24 +358,26 @@
               </packing>
             </child>
             <child>
-              <object class="GtkEntry" id="entry_time3">
+              <object class="GtkComboBoxText" id="combobox1">
                 <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="max-length">5</property>
-                <property name="invisible-char">●</property>
-                <property name="width-chars">5</property>
+                <property name="can-focus">False</property>
+                <items>
+                  <item translatable="yes">Left Click</item>
+                  <item translatable="yes">Right Click</item>
+                  <item translatable="yes">Middle Click</item>
+                </items>
               </object>
               <packing>
-                <property name="expand">True</property>
+                <property name="expand">False</property>
                 <property name="fill">True</property>
                 <property name="position">1</property>
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label8">
+              <object class="GtkLabel" id="label7">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
-                <property name="label" translatable="yes">times，every time delay</property>
+                <property name="label" translatable="yes">for</property>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -398,10 +400,10 @@
               </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label7">
+              <object class="GtkLabel" id="label8">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
-                <property name="label" translatable="yes">for</property>
+                <property name="label" translatable="yes">times，every time delay</property>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -410,13 +412,24 @@
               </packing>
             </child>
             <child>
-              <placeholder/>
+              <object class="GtkEntry" id="entry_time3">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="max-length">5</property>
+                <property name="invisible-char">●</property>
+                <property name="width-chars">5</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">5</property>
+              </packing>
             </child>
             <child>
-              <object class="GtkLabel" id="label6">
+              <object class="GtkLabel" id="label9">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
-                <property name="label" translatable="yes">click mouse</property>
+                <property name="label" translatable="yes">seconds</property>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -425,20 +438,7 @@
               </packing>
             </child>
             <child>
-              <object class="GtkComboBoxText" id="combobox1">
-                <property name="visible">True</property>
-                <property name="can-focus">False</property>
-                <items>
-                  <item translatable="yes">Left Click</item>
-                  <item translatable="yes">Right Click</item>
-                  <item translatable="yes">Middle Click</item>
-                </items>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">7</property>
-              </packing>
+              <placeholder/>
             </child>
           </object>
           <packing>
@@ -539,72 +539,6 @@
             <property name="can-focus">False</property>
             <property name="orientation">vertical</property>
             <child>
-              <object class="GtkLabel" id="label13">
-                <property name="visible">True</property>
-                <property name="can-focus">False</property>
-                <property name="label" translatable="yes">seconds</property>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkEntry" id="entry_time4">
-                <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="max-length">5</property>
-                <property name="invisible-char">●</property>
-                <property name="width-chars">5</property>
-                <property name="placeholder-text" translatable="yes">0</property>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">1</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkLabel" id="label12">
-                <property name="visible">True</property>
-                <property name="can-focus">False</property>
-                <property name="label" translatable="yes">times,every time delay</property>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">2</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkEntry" id="entry_sum4">
-                <property name="visible">True</property>
-                <property name="can-focus">True</property>
-                <property name="max-length">5</property>
-                <property name="invisible-char">●</property>
-                <property name="width-chars">5</property>
-                <property name="placeholder-text" translatable="yes">1</property>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">3</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkLabel" id="label11">
-                <property name="visible">True</property>
-                <property name="can-focus">False</property>
-                <property name="label" translatable="yes">for</property>
-              </object>
-              <packing>
-                <property name="expand">True</property>
-                <property name="fill">True</property>
-                <property name="position">4</property>
-              </packing>
-            </child>
-            <child>
               <object class="GtkLabel" id="label10">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
@@ -613,7 +547,7 @@
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">5</property>
+                <property name="position">0</property>
               </packing>
             </child>
             <child>
@@ -2724,7 +2658,7 @@
               <packing>
                 <property name="expand">True</property>
                 <property name="fill">True</property>
-                <property name="position">6</property>
+                <property name="position">1</property>
               </packing>
             </child>
             <child>
@@ -2734,6 +2668,72 @@
                 <property name="invisible-char">●</property>
                 <property name="width-chars">8</property>
                 <property name="placeholder-text" translatable="yes">KP_Enter</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label11">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">for</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="entry_sum4">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="max-length">5</property>
+                <property name="invisible-char">●</property>
+                <property name="width-chars">5</property>
+                <property name="placeholder-text" translatable="yes">1</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label12">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">times,every time delay</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">5</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="entry_time4">
+                <property name="visible">True</property>
+                <property name="can-focus">True</property>
+                <property name="max-length">5</property>
+                <property name="invisible-char">●</property>
+                <property name="width-chars">5</property>
+                <property name="placeholder-text" translatable="yes">0</property>
+              </object>
+              <packing>
+                <property name="expand">True</property>
+                <property name="fill">True</property>
+                <property name="position">6</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label13">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="label" translatable="yes">seconds</property>
               </object>
               <packing>
                 <property name="expand">True</property>
