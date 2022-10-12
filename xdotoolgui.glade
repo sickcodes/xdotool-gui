@@ -3072,7 +3072,6 @@
                     <property name="can-focus">True</property>
                     <property name="receives-default">True</property>
                     <signal name="toggled" handler="on_togglebutton1_toggled" swapped="no"/>
-                    <signal name="toggled" handler="on_togglebutton2_toggled" swapped="no"/>
                   </object>
                   <packing>
                     <property name="expand">False</property>

@@ -39,7 +39,7 @@ from gi.repository import GLib  # type: ignore
 
 
 filename = tempfile.NamedTemporaryFile(delete=True).name  #'./.xdotool-script'
-MouseLocation = True
+MouseLocation = False
 
 
 class xdotoolgui:
@@ -78,7 +78,6 @@ class xdotoolgui:
             "on_keybordcancel_clicked": self.keybordcancel,
             "on_button5_clicked": self.run,
             "on_togglebutton1_toggled": self.mouselocation,
-            "on_togglebutton2_toggled": self.mouselocation,  # I don't know
             "on_window1_expose_event": self.threadmouse,
             "on_aboutdialog1_close": self.quitabout,
         }
